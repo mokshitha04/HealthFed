@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Federated Healthcare Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Federated Healthcare Prediction System</h2>
+
+    <form method="POST">
+        {% for col in columns %}
+            <label>{{ col }}</label>
+            <input type="number" step="any" name="{{ col }}" required>
+        {% endfor %}
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <div class="result">
+            <p class="{% if 'High' in prediction %}high{% else %}low{% endif %}">
+                {{ prediction }}
+            </p>
+        </div>
+    {% endif %}
+
+    {% if explanation %}
+        <div class="card-box">
+            <b>Explanation:</b>
+            <p>{{ explanation }}</p>
+        </div>
+    {% endif %}
+
+    <a href="/dashboard">📊 View Dashboard</a>
+</div>
+
+</body>
+</html>

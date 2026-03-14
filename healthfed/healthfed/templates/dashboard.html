@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>📊 Model Dashboard</h2>
+
+    <div class="card-box">
+        <p><b>Centralized Accuracy:</b> {{ centralized }}</p>
+        <p><b>Federated Accuracy:</b> {{ federated }}</p>
+        <p><b>Noise Level:</b> {{ noise }}</p>
+    </div>
+
+    <a href="/">⬅ Back to Prediction</a>
+</div>
+
+</body>
+</html>
