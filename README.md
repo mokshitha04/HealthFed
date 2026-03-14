@@ -34,13 +34,12 @@ GitHub
 6 SHAP and LIME generate explanations for the prediction
 7 Results, risk probability, symptoms, and recommendations are displayed
 ▶️ How to Run the Project
-Clone the repository
-git clone https://github.com/yourusername/federated-disease-prediction.git
-
 Install required libraries
 pip install -r requirements.txt
 
 Run the Streamlit application
 streamlit run app.py
 GitHub
+👩‍💻 Author
+mokshitha varimadugu
 
